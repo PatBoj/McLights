@@ -4,6 +4,7 @@
 
 - **15.01.2026** create project using `uv`, add git connection, [automatically clean notebook outputs](#automatically-clean-notebook-output) and start working on getting data on cities in Poland
 - **16.01.2026** explore cities data, plan to merge `node` with `way` and `relation`
+- **17.01.2026** extract city names, positon and population; planned next steps to add administrative division
 
 
 # Footnotes:
