@@ -8,7 +8,7 @@
 
 ## Week 04:
 
-- **19.01.2026** add utils function to convert polygons and multipolygons into points, add cache directory (invisible), get McDonalds' data, get boundaries data. 
+- **19.01.2026** add utils function to convert polygons and multipolygons into points, add cache directory (invisible), get McDonalds' data, get boundaries data
 
 
 # Footnotes:
