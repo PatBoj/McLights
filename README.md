@@ -6,6 +6,10 @@
 - **16.01.2026** explore cities data, plan to merge `node` with `way` and `relation`
 - **17.01.2026** extract city names, positon and population; planned next steps to add administrative division
 
+## Week 04:
+
+- **19.01.2026** add utils function to convert polygons and multipolygons into points, add cache directory (invisible), get McDonalds' data, get boundaries data. 
+
 
 # Footnotes:
 
