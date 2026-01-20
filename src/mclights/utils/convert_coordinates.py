@@ -1,5 +1,4 @@
 from shapely.geometry import Point, Polygon, MultiPolygon
-from typing import Tuple
 
 
 def get_xy_coordinates(geometry: Point | Polygon | MultiPolygon | None) -> tuple[float, float] | None:

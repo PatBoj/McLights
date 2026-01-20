@@ -1,7 +1,7 @@
 [project]
-name = "restaurants"
-version = "0.1.0"
-description = "Add your description here"
+name = "mclights"
+version = "0.1.1"
+description = "It's a project to explore weird world of polish restaurants"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

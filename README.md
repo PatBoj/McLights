@@ -5,6 +5,7 @@
 - **15.01.2026** create project using `uv`, add git connection, [automatically clean notebook outputs](#automatically-clean-notebook-output) and start working on getting data on cities in Poland
 - **16.01.2026** explore cities data, plan to merge `node` with `way` and `relation`
 - **17.01.2026** extract city names, positon and population; planned next steps to add administrative division
+- **18.01.2026** change the name of the package, install current projet as a package, add function to download and save Open Street Maps and prepeare scripts to download data
 
 ## Week 04:
 
