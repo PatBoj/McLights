@@ -16,7 +16,7 @@ def get_data_osmx_or_local(file_path: Path, tags: dict, place: str = "Poland") -
         return gpd.read_file(file_path, layer=file_path.stem)
     else:
         logger.info(f"File {file_path} does not exitst, getting data from Open Street Maps, it may take a while...")
-        gdf = ox.features_from_place(place, tags=tags)
+        gdf = ox.features_from_place(place, tags=tags).reset_index()
         gdf = gdf.to_crs(epsg=2180)
         
         logger.info(f"Saving data to the {file_path}.")

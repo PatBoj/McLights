@@ -1,4 +1,8 @@
 from shapely.geometry import Point, Polygon, MultiPolygon
+from geopy.geocoders import Nominatim
+from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
+from loguru import logger
+import time
 
 
 def get_xy_coordinates(geometry: Point | Polygon | MultiPolygon | None) -> tuple[float, float] | None:
@@ -52,4 +56,27 @@ def convert_to_points(geometry: Point | Polygon | MultiPolygon | None) -> Point 
     if isinstance(geometry, (Polygon, MultiPolygon)):
         return geometry.centroid
 
+    return None
+
+
+def get_city(point: Point, geolocator: Nominatim):
+    """Get the city name from latitude and longitude using reverse geocoding."""
+    try:
+        location = geolocator.reverse((point.y, point.x), exactly_one=True, language="pl")
+        if location:
+            address = location.raw.get("address", {})
+            address = (
+                address.get("city") 
+                or address.get("town") 
+                or address.get("village")
+            )
+            logger.info(f"Located city: {address}")
+            return address
+    except GeocoderTimedOut:
+        logger.warning("GeocoderTimeOut Error, trying again...")
+        time.sleep(10)
+        return get_city(point, geolocator)  
+    except GeocoderUnavailable:
+        logger.warning("Something is wrong.")
+        return None
     return None
