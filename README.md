@@ -12,6 +12,7 @@
 - **19.01.2026** add utils function to convert polygons and multipolygons into points, add cache directory (invisible), get McDonalds' data, get boundaries data
 - **20.01.2026** get voivodeships data
 - **21.01.2026** join city data with voivodeship data and start working on mcdonald data
+- **22.01.2026** add missing cities to mcdonald data, start working on clustering
 
 
 # Footnotes:
